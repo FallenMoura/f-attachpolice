@@ -25,4 +25,78 @@
 - QBCore (shared/items.lua)
 ```lua
     ['police_lockpick'] 					 = {['name'] = 'police_lockpick', 			 	  	  	['label'] = 'Lockpick da Polícia', 				['weight'] = 300, 		['type'] = 'item', 		['image'] = 'lockpick.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Very useful if you lose your keys a lot.. or if you want to use it for something else...'},
-    }
+```
+-Step 4: Replace Config.Peds
+
+-qb-target (int.lua)
+```lua
+Config.Peds = {
+		[1] = {
+  model = 'a_m_y_business_03',
+  coords = vector4(459.03, -1017.21, 27.16, 92.48),
+  minusOne = true,
+  freeze = true,
+  invincible = true,
+  blockevents = true,
+  target = {
+    useModel = false,
+    options = {
+      {
+       num = 1,
+        type = "client",
+        event = "f-attachpolice:client:menu",
+        icon = 'fa-solid fa-car',
+        label = 'Comprar carro',
+        job = 'police',
+      },
+    },
+    distance = 2.5,
+  },
+},
+	[2] = {
+  model = 'a_m_y_business_03',
+  coords = vector4(442.73, -981.92, 30.69, 93.61),
+  minusOne = true,
+  freeze = true,
+  invincible = true,
+  blockevents = true,
+  target = {
+    useModel = false,
+    options = {
+      {
+       num = 1,
+        type = "client",
+        event = "qb-policeweapon:client:pedirlicenca",
+        icon = 'fa-solid fa-car',
+        label = 'Pedir Licença',
+        job = 'police',
+      },
+	  {
+       num = 2,
+        type = "client",
+        event = "qb-policeweapon:client:denuncia",
+        icon = 'fa-solid fa-car',
+        label = 'Apresentar uma denuncia',
+        job = 'police',
+      },
+	  {
+       num = 3,
+        type = "client",
+        event = "qb-policeweapon:client:chamaragente",
+        icon = 'fa-solid fa-car',
+        label = 'Chamar um agente',
+        job = 'police',
+      },
+	  {
+       num = 4,
+        type = "client",
+        event = "qb-policeweapon:client:buylicenseweapon",
+        icon = 'fa-solid fa-gun',
+        label = 'Comprar Porte de arma',
+      }
+    },
+    distance = 2.5,
+  },
+},
+}
+```
