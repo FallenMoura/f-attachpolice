@@ -32,7 +32,7 @@
 ```lua
 Config.Peds = {
 		[1] = {
-  model = 'a_m_y_business_03',
+  model = 's_f_y_cop_01',
   coords = vector4(459.03, -1017.21, 27.16, 92.48),
   minusOne = true,
   freeze = true,
@@ -54,7 +54,7 @@ Config.Peds = {
   },
 },
 	[2] = {
-  model = 'a_m_y_business_03',
+  model = 's_m_y_cop_01',
   coords = vector4(442.73, -981.92, 30.69, 93.61),
   minusOne = true,
   freeze = true,
